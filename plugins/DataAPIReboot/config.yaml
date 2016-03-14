@@ -1,0 +1,16 @@
+id: DataAPIReboot
+key: dataapireboot
+name: DataAPIReboot
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+version: 0.1
+description: Add Endpoint for Data API Process Reboot.
+applications:
+    data_api:
+        endpoints:
+              - id: process_reboot
+                handler: $dataapireboot::DataAPIReboot::Endpoint::_reboot
+                requires_login: 1
+                route: '/reboot'
+                verb: GET
+                version: 2
